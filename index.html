@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/index.css">
+  <title>JS 2025</title>
+</head>
+
+<body>
+  <div class="containers">
+    <h1>Variables</h1>
+
+    <code class="codebox">Inline JavaScript Example:
+
+            If using Inline script it should be placed at the bottom of the body tag.
+
+            &lt;script&gt;
+            var name = "CJ";
+            var lastName = "Marin";
+            var fullName = name + " " + lastName;
+            console.log(fullName);
+            &lt;/script&gt;
+        
+          </code>
+    <div class="hint">
+      <span>/ * if you want to comment out a block of code, you can use ( Alt+shift+A ) * /</span>
+      <span>/ / if you want to comment out a inline code, you can use ( Ctrl+/ )</span>
+
+    </div>
+    <div class="info">
+      <div class="rules">
+        <h2>Variable Rules:</h2>
+        <ul>
+          <li>Variables must start with a letter, underscore (_), or dollar sign ($).</li>
+          <li>Variables cannot start with a number.</li>
+          <li>Variable names are case-sensitive (e.g., myVar and myvar are different).</li>
+          <li>Use descriptive names for better readability.</li>
+          <li>Avoid using reserved keywords (e.g., var, let, const, function).</li>
+          <li>Use camelCase for multi-word variable names (e.g., myVariableName)</li>
+          <li>Cannot contain a hyphen (-) or space.</li>
+        </ul>
+      </div>
+
+      <div class="examples">
+        <code class="codebox"><span>**(var)-Prior ES2015/ES6**</span>
+            var userName = "CJ";
+            var totalWins = 30;
+            var totalLosses = 10;
+            var userTotalLosses = totalLosses + 5;
+            var userInfo =
+            userName + " has " + userTotalLosses + " losses and " + totalWins + " wins.";
+            console.log(userInfo);
+          </code>
+        <code class="console"><span>**Console**</span>
+                  CJ Marin
+                  CJ has 15 losses and 30 wins.
+            </code>
+        <code class="codebox"><span>**(let, const)-ES2015/ES6**</span>
+                  let name = "Arthur";
+                  const age = 25;
+          </code>
+      </div>
+      <a href="/html/data.html">
+        <button class="data">Data Types</button>
+      </a>
+    </div>
+
+  </div>
+
+  <script src="/index.js"></script>
+
+
+</body>
+
+</html>
