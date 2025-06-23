@@ -9,7 +9,212 @@
 </head>
 
 <body>
-  <h1>Data Types</h1>
+  <div class="container">
+    <h1>JavaScript Data Types</h1>
+
+    <div class="pvTypes">
+      <h2>Primitive / Value Types </h2>
+
+
+      <div class="string">
+        <code class="codebox"><span>*String*</span>
+             var firstName = 'Mary';
+
+            console.log("Value: ", firstName);
+            console.log("Type: ", typeof firstName);
+        </code>
+        <code class="console"><span>**Console**</span>
+              Value: Mary
+              Type: string
+                            
+        </code>
+
+      </div>
+      <span> The "string" is 'Mary'.</span>
+      <div class="number">
+        <code class="codebox"><span>*Number*</span>
+                  var age = 27;
+        
+                 console.log("Value: ", age);
+                 console.log("Type: ", typeof age);
+             </code>
+        <code class="console"><span>**Console**</span>
+                   Value: 27
+                   Type: number
+                                 
+             </code>
+      </div>
+      <span>The "number" is 27.</span>
+      <div class="boolean">
+        <code class="codebox"><span>*Boolean*</span>
+                  var recedingHairLine = false;
+        
+                 console.log("Value: ", recedingHairLine);
+                 console.log("Type: ", typeof recedingHairLine);
+             </code>
+        <code class="console"><span>**Console**</span>
+                   Value: false
+                   Type: boolean
+                                 
+             </code>
+
+      </div>
+      <span>The "boolean" is false or true.</span>
+      <div class="undefined">
+        <code class="codebox"><span>*Undefined*</span>
+                  var favFood;
+        
+                 console.log("Value: ", favFood);
+                 console.log("Type: ", typeof favFood);
+             </code>
+        <code class="console"><span>**Console**</span>
+                   Value: undefined
+                   Type: undefined
+                                 
+             </code>
+
+      </div>
+      <span>The "undefined" is the ;</span>
+      <div class="null">
+        <code class="codebox"><span>*Null*</span>
+                  var toiletPaper = null;
+        
+                 console.log("Value: ", toiletPaper);
+                 console.log("Type: ", typeof toiletPaper);
+             </code>
+        <code class="console"><span>**Console**</span>
+                   Value: null
+                   Type: object
+                                 
+             </code>
+
+      </div>
+      <span>The "null" is null;.</span>
+
+
+    </div>
+
+    <div class="rsTypes">
+      <h2>Reference Types / Structural Types</h2>
+      <div class="objects">
+        <code class="codebox"><span>*Objects*</span>
+                  var person = {
+                   firstName: 'Mary',
+                  age: 27,
+                  recedingHairLine: false,
+                  favFood,
+                  toiletPaper: 206,
+        }
+        
+                 console.log("Value: ", person);
+                 console.log("Type: ", typeof person);
+             </code>
+        <code class="console"><span>**Console**</span>
+                   <p class="topList">Value: {firstName: 'Mary', age:27, recedingHairLine: false, favFood: undefined, toiletPaper: 206}</p>
+                    <p class="list">
+                      age: 27
+                      favFood: undefined
+                      firstName: "Mary"
+                      recedingHairLine: false
+                      toiletPaper: 206</p>
+                   Type: object
+                                 
+             </code>
+      </div>
+      <span>The "objects" are the listed information.</span>
+      <div class="arrays">
+        <code class="codebox"><span>*Arrays*</span>
+              var students =["Orion", "Kingston", "Shayla", "Chloe"];
+        
+              
+              console.log("Value: ", students);
+              console.log("Type: ", typeof students);
+                   </code>
+        <code class="console"><span>**Console**</span>
+                         <p class="topList">Value: (4) ['Orion', 'Kingston', 'Shayla', 'Chloe'] </p>
+                          <p class="list">
+                            0: "Orion"
+                            1: "Kingston"
+                            2: "Shayla"
+                            3: "Chloe"
+                            length: 4
+                          </p>
+                         Type: object
+                                       
+                   </code>
+      </div>
+      <span>The "arrays" acts like a "list of objects" staring with "0" as your first item on the list.</span>
+      <div class="function">
+        <code class="codebox"><span>*Functions*</span>
+                    var myFunc = function () {
+                      // run some code
+                    }
+              
+                    
+                    console.log("Value: ", myFunc);
+                    console.log("Type: ", typeof myFunc);
+                         </code>
+        <code class="console"><span>**Console**</span>
+                               Value: f () {
+                                // run some code
+                               }
+                               
+                               Type: function
+                                             
+                         </code>
+      </div>
+      <span>The "function" acts like an action of a command.</span>
+
+    </div>
+
+    <div class="exercise">
+      <h2>Car Variables</h2>
+      <div class="car">
+        <code class="codebox"><span>*Car Variables*</span>
+          var carInfo = {
+          carColor: "Blue",
+          carYear: 2019,
+          carMake: "Honda",
+          carModel: "Fit",
+          isManualTransmission: true,
+          carMileage: 65000,
+          numSeats: 5,
+         };
+
+
+        console.log("Value: ", carInfo);
+        console.log("Type: ", typeof carInfo);
+
+    </code>
+        <code class="console"><span>**Console**</span>
+          Value:
+          <p class="list">
+            carColor: "blue"
+            carMake: "Honda"
+            carMileage: 65000
+            carModel: "Fit"
+            carYear: 2019
+            isManualTransmission: true
+            numSeats: 5
+          </p>
+          Type: object
+          
+
+    </code>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <a href="/html/string.html">
+    <button class="stringv">Strings</button>
+  </a>
+
+
+
+
 
   <script src="/js/data.js"></script>
 
