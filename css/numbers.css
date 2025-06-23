@@ -14,6 +14,14 @@ a {
   color: yellow;
   font-weight: 700;
   padding-left: 20px;
+  margin-top: 20px;
+}
+
+.jscontainer h2 {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  text-decoration: underline;
 }
 
 .codebox {
@@ -52,32 +60,7 @@ a {
   flex-direction: column;
 }
 
-.jscontainer h2 {
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
-  text-decoration: underline;
-}
-
-.string {
-  display: flex;
-  flex-direction: row;
-}
-
-.length {
-  display: flex;
-  flex-direction: row;
-}
-
-.ref {
-  margin: 20px;
-}
-
-ol {
-  padding: 30px 0 0 30px;
-}
-
-.numbers {
+.next {
   display: flex;
   flex-direction: row;
   margin-bottom: 90px;

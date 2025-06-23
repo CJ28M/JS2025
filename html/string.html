@@ -80,6 +80,7 @@
   </div>
 
   <div class="jscontainer">
+    <h2>concat()</h2>
     <div class="string">
       <code class="codebox"><span>*concat()*</span>
         text = "Hello" + " " + "World!";
@@ -95,22 +96,210 @@
             </code>
 
     </div>
+    <h2>indexOf()</h2>
+    <span>The indexOf(), is a versatile tool used to find the index of the first occurrence of a specified value within
+      either a string
+      or an array. It returns the zero-based index where the value is found, or -1 if the value is not present.</span>
     <div class="string">
-      <code class="codebox"><span>*indexOf()*</span>
-            text = "Hello" + " " + "World!";
-            text = "Hello".concat(" ", "World!");
+      <code class="codebox"><span>*indexOf() Strings*</span>
+        let myString = "Hello World";
+        let index = myString.indexOf("o"); 
+        console.log(index); 
         
-                    console.log(text);
+        let index2 = myString.indexOf("World"); 
+        console.log(index2); 
                     
         
                 </code>
       <code class="console"><span>**Console**</span>
-                      "Hello World!"
+        Output: 4
+
+
+
+        Output: 6
                                     
                 </code>
 
     </div>
+    <span>"Milk" starts at 0 on the list. If not found then its -1. If you search for the second "Eggs" you must say
+      starting from "3".</span>
+    <div class="string">
+      <code class="codebox"><span>*indexOf() Arrays*</span>
+        const groceryList = [
+        "Milk",
+        "Butter",
+        "Eggs",
+        "Chicken",
+        "Steak",
+        "Rice",
+        "Corn",
+        "Eggs",    ];
+
+        console.log(groceryList.indexOf("Eggs"));
+        console.log(groceryList.indexOf("Carrots"));
+        console.log(groceryList.indexOf("Eggs", 3));
+                        
+            
+                    </code>
+      <code class="console"><span>**Console**</span>
+            Output: 2
+            Output: -1
+            Output: 7                                        
+                    </code>
+
+    </div>
+    <span>lastIndexOf() returns the index of the last occurrence of a specified value in a string.**Remember it's
+      Capital
+      sensitive.**</span>
+    <div class="string">
+      <code class="codebox"><span>*lastIndexOf()*</span>
+        let text = "Hello planet earth, you are a great planet.";
+        let result = text.lastIndexOf("planet");
+
+        console.log(result);
+                            
+                
+                        </code>
+      <code class="console"><span>**Console**</span>
+                Output: 36
+                                                      
+                        </code>
+
+    </div>
+    <h2>replace()</h2>
+    <span>string.replace(searchString, replacerString)</span>
+    <div class="string">
+      <code class="codebox"><span>*replace()*</span>
+            let textInfo = "Mr Blue has a blue house and a blue car";
+            let results = textInfo.replace('blue', 'red')
+    
+            console.log(results);
+                                
+                    
+                            </code>
+      <code class="console"><span>**Console**</span>
+                    Output: Mr Blue has a red house and a blue car
+                                                          
+                            </code>
+
+    </div>
+    <span>string.replace(searchString, replacerFunction)</span>
+    <div class="string">
+      <code class="codebox"><span>*replace()*</span>
+        let results = textInfo.replace("blue", (match) => {
+        return match.toUpperCase();
+        });
+        
+        console.log(results);
+                                    
+                        
+                                </code>
+      <code class="console"><span>**Console**</span>
+                        Output: Mr Blue has a BLUE house and a blue car
+                                                              
+                                </code>
+
+    </div>
+    <span>string.replace(regexp, replacerString) g=global</span>
+    <div class="string">
+      <code class="codebox"><span>*replace()*</span>
+            let results = textInfo.replace(/blue/g, 'red')
+            console.log(results);
+                                        
+                            
+                                    </code>
+      <code class="console"><span>**Console**</span>
+                            Output: Mr Blue has a red house and a red car
+                                                                  
+                                    </code>
+
+    </div>
+    <span>"i" stands for insensitive flag. It ignores upper and lower case sensitivity</span>
+    <div class="string">
+      <code class="codebox"><span>*replace()*</span>
+                let results = textInfo.replace(/blue/gi, 'red')
+                console.log(results);
+                                            
+                                
+                                        </code>
+      <code class="console"><span>**Console**</span>
+                                Output: Mr red has a red house and a red car
+                                                                      
+                                        </code>
+
+    </div>
+    <span>string.replace(regexp, replacerFunction)</span>
+    <div class="string">
+      <code class="codebox"><span>*replace()*</span>
+                        let results = textInfo.replace(/blue/gi, (match) => {
+                          return match.toUpperCase();
+                        });
+                        
+                        console.log(results);
+                                                    
+                                        
+                                                </code>
+      <code class="console"><span>**Console**</span>
+                                        Output: Mr BLUE has a BLUE house and a BLUE car
+                                                                              
+                                                </code>
+
+    </div>
+    <h2>toString()</h2>
+    <span>Returns the content of a string</span>
+    <div class="string">
+      <code class="codebox"><span>*toString()*</span>
+                  let text = "Hello World!";
+                  let result = text.toString();
+                        
+                        console.log(result);
+                                                    
+                                        
+                                                </code>
+      <code class="console"><span>**Console**</span>
+                                        Output: Hello World!
+                                                                              
+                                                </code>
+
+    </div>
+
+    <h2>toUpperCase()</h2>
+    <div class="string">
+      <code class="codebox"><span>*toUpperCase()*</span>
+                        let text1 = "Hello World!";
+                        let text2 = text1.toUpperCase();
+                        
+                        console.log(text2);
+                                                    
+                                        
+                                                </code>
+      <code class="console"><span>**Console**</span>
+                                        Output: HELLO WORLD!
+                                                                              
+                                                </code>
+
+    </div>
+    <h2>toLowerCase()</h2>
+    <div class="string">
+      <code class="codebox"><span>*toLowerCase()*</span>
+        let text1 = "Hello World!";
+        let text2 = text1.toLowerCase();
+        
+        console.log(text2);
+                                                    
+                                        
+                                                </code>
+      <code class="console"><span>**Console**</span>
+                                        Output: hello world!
+                                                                              
+                                                </code>
+
+    </div>
   </div>
+
+  <a href="/html/numbers.html">
+    <button class="numbers">Numbers</button>
+  </a>
 
   <script src="/js/string.js"></script>
 </body>
