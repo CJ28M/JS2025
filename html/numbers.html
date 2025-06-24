@@ -140,12 +140,188 @@
         <li>parseInt()</li>
         <li>parseFloat()</li>
       </ol>
+      <h2>toFixed()</h2>
+      <div class="string">
+        <code class="codebox"><span>*toFixed()*</span>
+                     let numFix = 123.456789; 
+                      
+                      console.log(numFix.toFixed());
+                      console.log(numFix.toFixed(0));
+                      console.log(numFix.toFixed(2));
+                      console.log(numFix.toFixed(4));
+                      console.log(numFix.toFixed(6));
+                      console.log(numFix.toFixed(8));
+                          </code>
+        <code class="console"><span>**Console**</span>
+                        
+
+                                                Output: "123"
+                                                Output: "123"
+                                                Output: "123.46" //rounded up
+                                                Output: "123.4568" //rounded up
+                                                Output: "123.456789"
+                                                Output: "123.45678900"
+                                                
+                                                                
+                                          </code>
+      </div>
+      <span>The toFixed() method rounds a number to a given number of digits.</span><br>
+      <span>For working with money, toFixed(2) is perfect.</span>
+      <h2>number()</h2>
+      <div class="string">
+        <code class="codebox"><span>*number()*</span>
+
+          console.log(Number(true)); 
+          console.log(Number(false)); 
+
+          console.log(Number(null)); 
+          console.log(Number(undefined)); 
+                           
+                                </code>
+        <code class="console"><span>**Console**</span>
+                              
+                                                      Output: 1
+                                                      Output: 0
+
+                                                      Output: 0
+                                                      Output: NaN
+                                                      
+                                                                      
+                                                </code>
+      </div>
+      <span>Number() converts a value to a number if possible</span>
+      <h2>parseInt()</h2>
+      <div class="string">
+        <code class="codebox"><span>*parseInt()*</span>
+      
+          parseInt("10");
+          parseInt("10.00");
+          parseInt("10.33");
+          parseInt("34 45 66");
+          parseInt(" 60 ");
+          parseInt("40 years");
+          parseInt("He was 40"); 
+                                 
+                                      </code>
+        <code class="console"><span>**Console**</span>
+                                    
+                        Output: 10
+                        Output: 10
+                        Output: 10
+                        Output: 34
+                        Output: 60
+                        Output: 40
+                        Output: NaN
+                                                                                                      
+                                                      </code>
+      </div>
+      <span>parseInt() parses a string and returns the first integer:</span>
+      <h2>parseFloat()</h2>
+      <div class="string">
+        <code class="codebox"><span>*parseInt()*</span>
+            
+          parseFloat(10);
+          parseFloat("10");
+          parseFloat("10.33");
+          parseFloat("34 45 66");
+          parseFloat("He was 40"); 
+                                       
+                                            </code>
+        <code class="console"><span>**Console**</span>
+                                          
+                              Output: 10
+                              Output: 10
+                              Output: 10.33
+                              Output: 34
+                              Output: NaN
+                              
+                                                                                                            
+                                                            </code>
+      </div>
+      <span>parseFloat() parses a string and returns the first number:</span>
+      <h2>Exercise</h2>
+      <span>Consider this scenario: You have a shopping cart with 6 items in it. The total price of all the items
+        combined is $78.50
+        You have a coupon that gets you 25% off of the total price. After the coupon is applied, taxes will be applied
+        at a rate
+        of 7.75% of the total cost (cost after coupon).</span>
+      <ol>
+        <li>Create 6 different variables that represent the price of each item</li>
+        <li>Perform addition operations to get the total price of all 6 items and store it in a variable ($78.50)</li>
+        <li>Create a variable for the 25% coupon</li>
+        <li>Create a variable called priceAfterDiscount and store the total price after the 25% discount has been
+          applied (should
+          equal around $58.87)</li>
+        <li>Create a variable called taxes that stores the total taxes to be charged using the tax rate (should equal
+          around $4.56)</li>
+        <li>Create a variable called finalPrice that applies the 7.75% tax rate to priceAfterDicscount. (should equal
+          around $63.43)</li>
+      </ol>
+      <div class="string">
+        <code class="codebox"><span>*Exercise*</span>
+          groceryList = ["Milk", "Bread", "Butter", "Eggs", "Steak", "Corn"];
+          
+          const Milk = 12.99;
+          const Bread = 10.5;
+          const Butter = 15.75;
+          const Eggs = 8.25;
+          const Steak = 20.0;
+          const Corn = 11.01;
+          
+          const totalPrice = Milk + Bread + Butter + Eggs + Steak + Corn;
+          
+          console.log(totalPrice.toFixed(2));
+          
+          const coupon = 0.25;
+          
+          const priceAfterDiscount = totalPrice * (1 - coupon);
+          console.log(priceAfterDiscount.toFixed(2));
+          
+          const taxRate = 0.0775;
+          const taxes = priceAfterDiscount * taxRate;
+          console.log(taxes.toFixed(2));
+          
+          const finalPrice = priceAfterDiscount + taxes;
+          console.log(finalPrice.toFixed(2));
+                
+                                             
+                                                  </code>
+        <code class="console"><span>**Console**</span>
+                                                
+
+
+
+
+
+
+
+
+
+
+                                    Output: 78.50
+
+
+
+                                    Output: 58.88
+                                    
+                                    
+                                    
+                                    
+                                    Output: 4.56
+                                    
+                                    
+                                    Output: 63.44
+                                    
+                                    
+                                                                                                                  
+                                                                  </code>
+      </div>
     </div>
 
 
 
-    <a href="/html/numbers.html">
-      <button class="next">Next page</button>
+    <a href="/html/operators.html">
+      <button class="next">Comparison Operators</button>
     </a>
 
     <script src="/js/numbers.js"></script>

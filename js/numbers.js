@@ -37,3 +37,30 @@ console.log(numStr);
 
 var numStri = 10 + "5";
 console.log(numStri);
+
+/* Exercise */
+
+groceryList = ["Milk", "Bread", "Butter", "Eggs", "Steak", "Corn"];
+
+const Milk = 12.99;
+const Bread = 10.5;
+const Butter = 15.75;
+const Eggs = 8.25;
+const Steak = 20.0;
+const Corn = 11.01;
+
+const totalPrice = Milk + Bread + Butter + Eggs + Steak + Corn;
+
+console.log(totalPrice.toFixed(2));
+
+const coupon = 0.25;
+
+const priceAfterDiscount = totalPrice * (1 - coupon);
+console.log(priceAfterDiscount.toFixed(2));
+
+const taxRate = 0.0775;
+const taxes = priceAfterDiscount * taxRate;
+console.log(taxes.toFixed(2));
+
+const finalPrice = priceAfterDiscount + taxes;
+console.log(finalPrice.toFixed(2));
