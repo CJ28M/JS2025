@@ -10,33 +10,138 @@
 
 <body>
   <div class="container">
-    <h1>Comparison Operators</h1>
+    <h1>Operators</h1>
 
     <div class="jscontainer">
 
-      <span>operators</span>
+      <h2>Comparison Operators</h2>
+      <ul>
+        <li>=== equal to</li>
+        <li>!== not equal to</li>
+        <li>> greater than</li>
+        <li>
+          &lt; less than</li>
+        <li>>= greater than or equal to</li>
+        <li>
+          &lt;= less than or equal to</li>
+
+      </ul>
 
 
       <div class="string">
-        <code class="codebox"><span>*Operators*</span>
-                   var totalUsers = 42;
+        <code class="codebox"><span>*Comparison*</span>
+                   if (1==='1') {
+                    console.log('Holy smokes it\'s true!!');
+                   } else {
+                    console.log('You wish...');
+                   }
+
+
+                  var currentAccountBalance = 300;
+                  var purchase = 74.99;
+                  var freeLavaLampVoucher = true;
+
+                  if (purchase 8lt;= currentAccountBalance) {
+                    console.log('Lava lamps for days.....');
+                  } else if (freeLavaLampVoucher) {
+                    console.log('Free stuff rocks!!');
+                  } else {
+                    console.log('You broke bruh.....');
+                  }
+                  
                    
-  
-                   console.log(sciNot);
               </code>
         <code class="console"><span>**Console**</span>
-                    Output: 
-                    Output: 
+                    
+                    Output: Holy smokes it's true!!
   
+
+
+
+
+
+
+                    Output: Lava lamps for days....
+
+                    Output: Free stuff rocks!!
                                     
               </code>
       </div>
-    </div>
-    <a href="/html/operators.html">
-      <button class="next">NEXT PAGE</button>
-    </a>
+      <span>Comparison operators are used in logical statements to determine equality or difference between variables or
+        values.</span>
+      <h2>Logical Operators</h2>
+      <ul>
+        <li>&& and</li>
+        <li>|| or</li>
+        <li>>! not</li>
+      </ul>
+      <div class="string">
+        <code class="codebox"><span>*Logical*</span>
+                         var skaterOne = 9.5;
+                         var skaterTwo = 9;
+                         var skaterThree = 9;
+                         var isJackedUp = true;
 
-    <script src="/js/operators.js"></script>
+                         if (skaterTwo > skaterThree && skaterTwo &lt;= skaterOne && skaterOne &lt; 100) {
+                         console.log('Move skater2 into next round');
+                         } else if (
+                          skaterThree > skaterTwo
+                          || skaterThree === skaterTwo
+                          && skaterTwo &lt; skaterOne
+                          && !isJackedUp
+                         ){
+                          console.log('skater3 is steppin up their game!');
+
+                         } else if (skaterThree > 5 && isJackedUp) {
+                          console.log('skaterThree takes home the Gold!');
+                         }
+                    </code>
+        <code class="console"><span>**Console**</span>
+                          
+                          
+          
+          
+                        Output: Move skater2 into next round
+
+
+
+                        Output: Skater3 is steppin up thier game!
+                                          
+                    </code>
+      </div>
+      <h2>Exercise 1</h2>
+      <span>Consider some basic American traffic signaling</span>
+      <ul>
+        <li>Create a string variable called currentLightColor</li>
+        <li>Set it's value to "Green", "Yellow", or "Red"</li>
+        <li>Create conditional if / else logic to print: "The light is X" where X is the value of the light variable
+        </li>
+        <li>The if /else clause should print the appropriate color</li>
+      </ul>
+      <div class="string">
+        <code class="codebox"><span>*Exercise 1*</span>
+          var currentLightColor = ['Green' + 'Yeloow', 'Red'];
+                               
+                          </code>
+        <code class="console"><span>**Console**</span>
+                                
+                                
+                
+                
+                              Output: 
+                                                
+                          </code>
+      </div>
+
+
+    </div>
+  </div>
+
+  <a class="next" href="/html/operators.html">
+    Next Page
+  </a>
+
+  <script src="/js/operators.js"></script>
 </body>
 
 </html>

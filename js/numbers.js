@@ -51,16 +51,18 @@ const Corn = 11.01;
 
 const totalPrice = Milk + Bread + Butter + Eggs + Steak + Corn;
 
-console.log(totalPrice.toFixed(2));
+console.log("Total Price: $", totalPrice.toFixed(2));
 
 const coupon = 0.25;
 
 const priceAfterDiscount = totalPrice * (1 - coupon);
-console.log(priceAfterDiscount.toFixed(2));
+console.log("25% Off: $", priceAfterDiscount.toFixed(2));
 
 const taxRate = 0.0775;
 const taxes = priceAfterDiscount * taxRate;
-console.log(taxes.toFixed(2));
+console.log("Plus Taxes: $", taxes.toFixed(2));
 
 const finalPrice = priceAfterDiscount + taxes;
-console.log(finalPrice.toFixed(2));
+console.log("Final Price: $", finalPrice.toFixed(2));
+
+// console.log("traffic Light: ", currentLightColor);

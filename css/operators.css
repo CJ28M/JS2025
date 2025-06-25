@@ -65,7 +65,8 @@ a {
   flex-direction: row;
 }
 
-ol {
+ol,
+ul {
   padding: 30px 0 30px 30px;
 }
 
@@ -79,4 +80,9 @@ ol {
   padding: 10px;
   border: 1px solid rgb(44, 0, 70);
   border-radius: 20px;
+}
+
+p {
+  color: lightskyblue;
+  display: inline;
 }
