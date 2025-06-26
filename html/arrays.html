@@ -27,22 +27,94 @@
 
       </ul>
 
+      <span>The Array object, as with arrays in other programming languages, enables storing a collection of multiple
+        items under a
+        single variable name, and has members for performing common array operations.</span>
 
       <div class="string">
-        <code class="codebox"><span>*Comparison*</span>
-                    
+        <code class="codebox"><span>*arrays*</span>
+          var tvshows = ["gold rush", "breaking bad", "the big bang theory"];
+          
+          console.log(tvshows);
                     
                      
                 </code>
         <code class="console"><span>**Console**</span>
                       
-                    
-                                      
+                    0: "gold rush"
+                    1: "breaking bad"
+                    2: "the big bang theory"
+                        length: 3              
                 </code>
       </div>
+      <span>[] is the array</span>
+      <div class="string">
+        <code class="codebox"><span>*arrays*</span>
+                var tvshows = ["gold rush", "breaking bad", "the big bang theory"];
+                
+                console.log(tvshows[2]);
+                          
+                           
+                      </code>
+        <code class="console"><span>**Console**</span>
+                            
+                          the big bang theory
+                                        
+                      </code>
+      </div>
+      <span>When requesting a value you enter the index</span>
+      <div class="string">
+        <code class="codebox"><span>*arrays*</span>
+                var tvshows = ["gold rush", "breaking bad", "the big bang theory"];
+
+                var userSavedMovies = [];
+
+                userSavedMovies.push('Minecraft');
+                userSavedMovies.push('Scary movie');
+                userSavedMovies.push('Room 1908');
+                
+                console.log(userSavedMovies);
+                          
+                           
+                      </code>
+        <code class="console"><span>**Console**</span>
+                            
+                          0:"Minecraft"
+                          1:"Scary movie"
+                          2:"Room 1908"
+                              length: 3              
+                      </code>
+      </div>
+      <span>.push method takes a value and adds it to the end of the array</span>
+      <div class="string">
+        <code class="codebox"><span>*arrays*</span>
+                      var tvshows = ["gold rush", "breaking bad", "the big bang theory"];
+      
+                      var userSavedMovies = [];
+      
+                      userSavedMovies.push('Minecraft');
+                      userSavedMovies.push('Scary movie');
+                      userSavedMovies.push('Room 1908');
+                      
+                      userSavedMovies.pop();
+
+                      console.log(userSavedMovies);
+                                
+                                 
+                            </code>
+        <code class="console"><span>**Console**</span>
+                                  
+          0:"Minecraft"
+          1:"Scary movie"
+                                    length: 2              
+                            </code>
+      </div>
+      <span>.pop method removes a value from the index list</span>
     </div>
   </div>
-
+  <a class="next" href="/html/loops.html">
+    loops
+  </a>
   <script src="/js/arrays.js"></script>
 </body>
 
