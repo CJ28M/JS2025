@@ -11,7 +11,7 @@
 <body>
 
   <div class="container">
-    <h1>Functions</h1>
+    <h1>JS Functions</h1>
 
     <div class="jscontainer">
 
@@ -27,19 +27,95 @@
           &lt;= less than or equal to</li>
 
       </ul>
-      <h2>title</h2>
+      <h2>Functions</h2>
 
-
+      <span>Inside calcArea(w,l:perameters)</span><br><br>
+      <span>Inside the calcArea(15, 18: arrguments)</span>
       <div class="string">
         <code class="codebox"><span>*Functions*</span>
-                     
+          
+          
+          function calcArea(w, l) {
+          return w * l;
+          }
+          
+          var kitchenArea = calcArea(15, 18);
+          var bedroomArea = calcArea(12, 10);
+          
+           console.log(kitchenArea);
+          console.log(bedroomArea); 
                         
                          
                     </code>
         <code class="console"><span>**Console**</span>
-                         
-                                   
+                         270
+                         120                                   
                     </code>
+      </div>
+      <h2>Return Function</h2>
+      <span>Order of operations</span><br><br>
+      <span>return values</span>
+      <div class="string">
+        <code class="codebox"><span>*Functions*</span>
+                
+                
+          function toCelsius(f) {
+          var temp = (5 / 9) * (f - 32);
+          return temp.toFixed(2);
+          }
+          
+          // var cel = toCelsius(46);
+          
+          var weather = "The temperature outside is " + toCelsius(46) + " celsius!";
+          
+          // console.log(weather); 
+                              
+                               
+                          </code>
+        <code class="console"><span>**Console**</span>
+                  The temperature outside is 7.78 celsius!                                   
+          
+
+                          </code>
+      </div>
+      <h2>"level up" Dynamic</h2>
+      <span>warrior.attack = warrior.attack + 2 === warrior.attack += 2</span><br><br>
+
+
+      <div class="string">
+        <code class="codebox"><span>*Functions*</span>
+                         
+                var warrior = {
+                name: "Super Tuffy",
+                attack: 70,
+                defence: 55,
+                mana: 100,
+                };
+                
+                function levelUp(prop, val) {
+                warrior[prop] += val;
+                }
+                
+                levelUp("attack", 2);
+                levelUp("defence", 8);
+                levelUp("mana", 17);
+                
+                /* warrior.attack += 2;
+                warrior.defence += 6;
+                warrior.mana += 12; */
+                
+                console.log(warrior);
+                                    
+                                     
+                                </code>
+        <code class="console"><span>**Console**</span>
+                                             name: "Super Tuffy"
+                                             attack: 72
+                                             defence: 63
+                                             mana: 117              
+                
+      
+                                </code>
       </div>
 
 
