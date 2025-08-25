@@ -17,7 +17,7 @@ levelUp("mana", 17);
 warrior.defence += 6;
 warrior.mana += 12; */
 
-console.log(warrior);
+// console.log(warrior);
 
 function toCelsius(f) {
   var temp = (5 / 9) * (f - 32);
@@ -39,3 +39,5 @@ var bedroomArea = calcArea(12, 10);
 
 /* console.log(kitchenArea);
 console.log(bedroomArea); */
+
+// const name = "andrew";
