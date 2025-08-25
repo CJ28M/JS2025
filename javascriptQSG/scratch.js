@@ -1,5 +1,29 @@
-document.getElementById("content").textContent = "Hello, World";
-alert("this is an alert pop-up message!"); //single line comments
-/* multi 
-line 
-comments */
+// document.getElementById("content").textContent = "show on html ";
+// alert("this is an alert pop-up message!"); //single line comments
+// /* multi
+// line
+// comments */
+
+// firstName = "Chris";
+// lastName = "Doe";
+// middleName = "smith";
+
+// console.log("hello, " + firstName + "!");
+
+// //console.log("Hello, "+ firstName + " " + middleName + " " + lastName + "!")  INSTEAD USE:
+
+// console.log(`Hello, ${firstName} ${middleName} ${lastName}!`);
+
+// firstName = prompt("Please enter your name:");
+// alert(`Hello, ${firstName}`);
+
+//page 31
+
+firstNameTextBox = document.getElementById("firstName");
+submitButton = document.getElementById("submit");
+greetingContainer = document.getElementById("greeting");
+
+submitButton.addEventListener("click", function () {
+  //greetingContainer.textContent = "Hello, " + firstNameTextBox.value + "!";
+  greetingContainer.textContent = `Hello, ${firstNameTextBox.value}! page 33`;
+});
