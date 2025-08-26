@@ -27,3 +27,12 @@ submitButton.addEventListener("click", function () {
   //greetingContainer.textContent = "Hello, " + firstNameTextBox.value + "!";
   greetingContainer.textContent = `Hello, ${firstNameTextBox.value}! page 33`;
 });
+
+//--------------------------------ARRAYS-----------------------------------------
+let shoppingList = ["Milk", "Eggs", "Cheese", "Bread"];
+console.log("the second item on the shopping list is " + shoppingList[1]);
+
+console.log(
+  "we can create a string from the items of an array with join" +
+    shoppingList.join(", ")
+);
