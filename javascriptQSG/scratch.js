@@ -105,3 +105,43 @@ for (let x = 0; x < 10; x++) {
     console.log(`x, y = ${x}, ${y}`);
   }
 }
+
+//WHILE Loops
+//runs the code within curly braces until the conditional statement within parentheses evaluates to false. page 68
+
+/* let condition = true
+
+<run code until condition is false>
+while (condition) {
+}*/
+
+/*Define a variable named v. set it to an empty string. Then we start a while loop the the condition being NOT v, meaning to run code in the curly braces until v evaluates to true. The string v won't evaluate to true until it has value, cuz if its empty, it evaluates as false */
+
+let v = "";
+
+while (!v) {
+  v = prompt("Please enter a value: ");
+}
+
+console.log(`You eneterd: ${v}`);
+
+/*DO loop works the same but run the loop once, then the statement inside the parentheses is evaluated, if true the code is looped until it evaluates to false.
+
+/In our case, this means if v is NOT true, because of the ! in front of v.*/
+
+v = "";
+
+do {
+  v = prompt("Please enter a value: ");
+} while (!v);
+
+console.log(`You entered: ${v}`);
+
+//FOR...IN
+//iterate through arrays and retrieve the value at each position within the array.
+//-define an array, then use for...in to display each item.pg 70
+
+let groceryList = ["Milk", "Eggs", "Cheese", "Bread"];
+for (let i in groceryList) {
+  console.log(groceryList[i]);
+}
