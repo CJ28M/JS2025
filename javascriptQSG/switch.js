@@ -3,6 +3,6 @@ colorSquare = document.getElementById("colorSquare");
 
 colorSelector.addEventListener("change", function () {
   let color = colorSelector.value;
-  colorSelector.style.backgroundColor = color;
+  colorSquare.style.backgroundColor = color;
   console.log(color);
 });
