@@ -219,3 +219,28 @@ function greet(firstName = "World", lastName = "") {
 greet("chris", "kok");
 
 // ---------------------------------RETURNING VALUES-------------------------
+//to return a value to the function
+
+// colorSelector = document.getElementById("colorSelector");
+
+// let salesTax = calculateSalesTax(42.94); // run function calculateSalesTax with the argument for subtotal set to 42.94. the result is returned and is stored in the salesTax variable.
+
+function calculateSalesTax(subtotal, taxRate = 0.08) {
+  return subtotal * taxRate;
+}
+
+let subtotal = 42.94;
+let salesTax = calculateSalesTax(subtotal);
+let total = subtotal + salesTax;
+
+console.log(total.toFixed(2)); //two decimal places
+
+//Math.round()
+
+let realTotal = Math.round((total * 100) / 100); //prevents us from having to change the type of variable, total * 100 and rounds the result to the nearest integer.
+
+console.log(realTotal); //46
+
+//localization, the act of formatting the display of currency, date, time, etc. to match a particular country or region.
+
+total.toLocaleString("en-us", { maximumFractionDigits: 2 });
