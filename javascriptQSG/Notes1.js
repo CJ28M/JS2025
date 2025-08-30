@@ -244,3 +244,7 @@ console.log(realTotal); //46
 //localization, the act of formatting the display of currency, date, time, etc. to match a particular country or region.
 
 total.toLocaleString("en-us", { maximumFractionDigits: 2 });
+
+/*toLocaleString:  to make a string from the total, specifying two arguments. 
+-The first is the region, which in this case is "en-US"
+-The second is chapter 7.*/
