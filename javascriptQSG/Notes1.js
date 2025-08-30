@@ -163,11 +163,59 @@ function greeting() {
 
 //greeting()  <= Now we see a pop-up with the greeting
 
-greetingContainer = document.getElementById("greeting");
-sayHello = document.getElementById("sayHello");
+// greetingContainer = document.getElementById("greeting");
+// sayHello = document.getElementById("sayHello");
 
-function greeting() {
-  greetingContainer.textContent = "Hello, World";
+// function greeting() {
+//   greetingContainer.textContent = "Hello, World";
+// }
+
+// sayHello.addEventListener("click", greeting); //when it happens not before [("click", greeting())] <= immediately
+
+//---------------------------------Arguments-----------------------------------
+//passing arguments: a variable we provide to the function, and act of doing this is commonly called passing. "pass an argument to a function"
+
+function greetings(firstName) {
+  console.log(`Hello, ${firstName}!`);
 }
 
-sayHello.addEventListener("click", greeting); //when it happens not before [("click", greeting())] <= immediately
+greetings("chris");
+
+//Providing Default Parameters for Arguments
+
+function greet(firstName = "World") {
+  console.log(`Hello, ${firstName}!`);
+}
+
+greet();
+
+//functions can accept multiple arguments and they can also have default parameters:
+
+// function greeting(firstName = "World", lastName = "") {
+//   console.log(`Hello, ${firstName} ${lastName}!`);
+// }
+
+// greeting("chris", "oliver");
+
+//since default parameters are provided for both agruments, we can omit both:
+
+greeting();
+
+//ther's unwanted space between the World and !, we fix this with a CONDITIONAL:
+// * remember an "if/else" conditional tells javascript to run code if the statement inside the parentheses evaluates to true.
+
+function greet(firstName = "World", lastName = "") {
+  let message = "Hello, ";
+
+  if (lastName) {
+    message = message + firstName + " " + lastName + "!";
+  } else {
+    message = message + firstName + "!";
+  }
+  console.log(message);
+}
+
+// greeting();
+greet("chris", "kok");
+
+// ---------------------------------RETURNING VALUES-------------------------
