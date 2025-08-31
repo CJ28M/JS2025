@@ -231,20 +231,47 @@ function calculateSalesTax(subtotal, taxRate = 0.08) {
 
 let subtotal = 42.94;
 let salesTax = calculateSalesTax(subtotal);
-let total = subtotal + salesTax;
+// let total = subtotal + salesTax;
 
-console.log(total.toFixed(2)); //two decimal places
+// console.log(total.toFixed(2)); //two decimal places
 
 //Math.round()
 
-let realTotal = Math.round((total * 100) / 100); //prevents us from having to change the type of variable, total * 100 and rounds the result to the nearest integer.
+// let realTotal = Math.round((total * 100) / 100); //prevents us from having to change the type of variable, total * 100 and rounds the result to the nearest integer.
 
-console.log(realTotal); //46
+// console.log(realTotal); //46
 
 //localization, the act of formatting the display of currency, date, time, etc. to match a particular country or region.
 
-total.toLocaleString("en-us", { maximumFractionDigits: 2 });
+// total.toLocaleString("en-us", { maximumFractionDigits: 2 });
 
 /*toLocaleString:  to make a string from the total, specifying two arguments. 
 -The first is the region, which in this case is "en-US"
 -The second is chapter 7.*/
+
+function getFormattedCurrency(amount, region = "en-US") {
+  return amount.toLocaleString(region, { maximumFractionDigits: 2 });
+}
+
+function calculateSalesTax(subtotal, taxRate = 0.08) {
+  return subtotal * taxRate;
+}
+
+let total = parseFloat((subtotal + salesTax).toFixed(2));
+let stringTotal = getFormattedCurrency(total);
+console.log(total);
+console.log(stringTotal);
+
+//-------------------------Declaring Function Expressions----------------------------
+//is when you set a variable to a function.
+
+//hoisted: is available before it is defined within the same scope.
+function calculateSalesTax(subtotal, taxRate = 0.08) {
+  return subtotal * taxRate;
+}
+
+// let's turn this into a function expression
+calculateSalesTax = function (subtotal, taxRate = 0.08) {
+  //define it before you can use it
+  return subtotal * taxRate;
+};
