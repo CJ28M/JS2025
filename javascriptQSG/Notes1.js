@@ -275,3 +275,25 @@ calculateSalesTax = function (subtotal, taxRate = 0.08) {
   //define it before you can use it
   return subtotal * taxRate;
 };
+
+calculateSalesTax(100);
+//we have to put in a value to subtotal, but not to taxRate.
+
+function logMessageWithTimestamp(message) {
+  const currentDateTime = new Date().toLocaleString();
+  const logMessage = `${currentDateTime} - ${message}`;
+
+  console.log(logMessage);
+}
+
+logMessageWithTimestamp("Hello");
+
+//^To be able to re-use date and time function
+
+function logMessageWithTimestamp2(message) {
+  console.log(`${new Date().toLocaleString()} - ${message}`);
+}
+
+logMessageWithTimestamp2("Hey");
+
+//Practical and faster for cpu
