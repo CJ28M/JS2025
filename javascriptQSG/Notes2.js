@@ -25,9 +25,53 @@ console.log(calculateLineCost());
 let productPrice = 8.95
 let productQuantity = 3
 
+
+
 function calculateLineCost() {
   let lineCost = productPrice * productQuantity;
  
   ^^Only avaible inside the calculateLineCost function
 
 */
+
+//The variable lineCost is not in scope globally. It's only in the scope within the function, so the console can't find it. The Return statement is how we get data out of the funtion by returning the value of lineCost to the code that called it.
+
+//------Nested functions----------------------------------------------------
+//functions can be defined within other functions
+
+function calculateLineCost(productPrice, productQuantity = 1) {
+  let lineCost = productPrice * productQuantity;
+
+  function getFormattedCurrency(region = "en-US") {
+    return lineCost.toLocaleString(region, { maximumFractionDigits: 2 });
+  }
+  return getFormattedCurrency();
+}
+console.log(calculateLineCost(4.95, 5));
+
+//can have as many child functions as you want and nesting doesn't have to go just one layer deep, meaning a child can nest a function as many as you want.
+
+//------------------Putting it all Together----------------------------
+const cartItem = function (price, quantity = 1) {
+  let lineCost = 0.0;
+  let totalQuantity = 0;
+
+  function calculateLineCost() {
+    lineCost = price * totalQuantity;
+  }
+
+  function getFormattedCurrency(region = "en-US") {
+    return lineCost.toLocaleString(region, {
+      maximumFractionDigits: 2,
+    });
+  }
+
+  return function () {
+    totalQuantity += quantity;
+    calculateLineCost();
+    return getFormattedCurrency();
+  };
+};
+
+let item = cartItem(4.95, 10);
+item();
