@@ -74,4 +74,16 @@ const cartItem = function (price, quantity = 1) {
 };
 
 let item = cartItem(4.95, 10);
-item();
+let item2 = cartItem(16.24);
+
+console.log(item(), item2());
+
+item = cartItem(4.95);
+console.log(item()); //4.95
+console.log(item()); // add another = 9.9
+
+//Closure is a concept that uses lexical scoping and nested functions to maintain value inside a function, even after it has finished.
+
+//Lexical scope descibes the scope of variables based on their position in the source code.
+
+//functions in JavaScript can be nested within one another and can access variables in their enclosing scope.
