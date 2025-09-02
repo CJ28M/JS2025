@@ -114,4 +114,88 @@ class Greeting {
 let a = new Greeting("Robert");
 
 //class=constructor, argument= firsName
+
+//------Methods----------------------------------------------------------------------
 //functions that are inside objects are called methods
+
+class Greetings {
+  constructor(firstName) {
+    this.firstName = firstName;
+  }
+  sayHello() {
+    console.log(`Hello, ${this.firstName}!`);
+  }
+}
+
+a = new Greetings("Chris");
+a.sayHello();
+
+//methods can take arguments just like functions
+
+class greet {
+  constructor(firstName) {
+    this.firstName = firstName;
+  }
+  sayBye(greet = "Goodbye, ") {
+    console.log(`${greet}${this.firstName}!`);
+  }
+}
+
+let b = new greet("CJ");
+b.sayBye();
+
+//--------Properties------------------------------------------------------------
+// is a variable that is attached to an object.
+//property can either be a variable(data) or a function(logic)
+
+class Grace {
+  constructor(firstName) {
+    //is a property that belongs to object that class will create
+    this.firstName = firstName;
+  }
+  sayJack(grace = " Jack, ") {
+    console.log(`${grace}${this.firstName}!`);
+  }
+}
+
+b = new Grace("Off"); //object is now named b. and the firstName variable with our object is a  property.We can access that property from the outside the object.
+
+console.log(b.firstName);
+console.log(b["firstName"]);
+
+//You can iterate through the properties in an object with a for loop.
+
+class Address {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
+
+let customer = new Address("Jack", "Off");
+
+for (let detail in customer) {
+  console.log(detail); //only get property name
+} //firstName lastName
+
+//lets get the actual values of each property:
+
+for (let detail in customer) {
+  console.log(customer[detail]);
+} //Jack Off
+
+// ** Try modifying our address class to add a country property. then use console.log to display it in the console.
+
+class Addresss {
+  constructor(firstName, lastName, country) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.country = country;
+  }
+}
+
+let customers = new Addresss("robert", "Oliver", "United States");
+
+for (let detail in customers) {
+  console.log(detail + ": " + customers[detail]);
+}
