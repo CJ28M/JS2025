@@ -228,3 +228,51 @@ let z;
 //let min = Math.min(x, y, z); min value
 
 console.log(z);
+
+//Random Number Generator:
+
+// const min = 50;
+// const max = 100;
+
+// let randomNum = Math.floor(Math.random() * (max - min)) + min;     **range value
+let randomNums = Math.floor(Math.random() * 6) + 1;
+
+console.log(randomNums);
+
+//--------6 sided Dice----
+//html: create <button> and <label>
+
+const myButton = document.getElementById("myButton");
+const myLabel = document.getElementById("myLabel");
+const min = 1;
+const max = 6;
+let randomNum; //dont assign yet
+
+myButton.onclick = function () {
+  //what is the function doing? create a randomNum
+  randomNum = Math.floor(Math.random() * max) + min;
+  myLabel.textContent = randomNum;
+};
+
+//------3 dices at once------------
+/* 
+const myButton = document.getElementById("myButton");
+const label1 = document.getElementById("label1");
+const label2 = document.getElementById("label2");
+const label3 = document.getElementById("label3");
+const min = 1;
+const max = 6;
+let randomNum1;
+let randomNum2;
+let randomNum3;
+
+myButton.onclick = function(){
+  randomNum1 = Math.floor(Math.random() * max) + min;
+  randomNum2 = Math.floor(Math.random() * max) + min;
+  randomNum3 = Math.floor(Math.random() * max) + min;
+  label1.textContent = randomNum1;
+  label2.textContent = randomNum2;
+  label3.textContent = randomNum3;
+}
+
+*/
