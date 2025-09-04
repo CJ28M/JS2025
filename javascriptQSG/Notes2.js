@@ -276,3 +276,17 @@ myButton.onclick = function(){
 }
 
 */
+
+//-----------Ternary Operator------------------------
+//A sortcut to if{} and else{} statements help to assign a variable based on a condition. condition ? codeTrue : codeFalse;
+
+let age = 12;
+let message = age >= 18 ? "You're an adult" : "You're a minor";
+console.log(message);
+
+//discount code----
+let purchaseAmount = 125;
+let discount = purchaseAmount >= 100 ? 10 : 0;
+console.log(
+  `Your total is $${purchaseAmount - purchaseAmount * (discount / 100)}`
+);
