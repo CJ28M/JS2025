@@ -154,6 +154,7 @@ class Grace {
     this.firstName = firstName;
   }
   sayJack(grace = " Jack, ") {
+    //property
     console.log(`${grace}${this.firstName}!`);
   }
 }
@@ -172,7 +173,7 @@ class Address {
   }
 }
 
-let customer = new Address("Jack", "Off");
+let customer = new Address("Jack", "Oliver");
 
 for (let detail in customer) {
   console.log(detail); //only get property name
@@ -194,8 +195,36 @@ class Addresss {
   }
 }
 
-let customers = new Addresss("robert", "Oliver", "United States");
+let customers = new Addresss("robert", "Oliver", "United States"); //new object of class address
 
 for (let detail in customers) {
   console.log(detail + ": " + customers[detail]);
 }
+
+//-----Creatign Objects without Classes---------------------------------------------
+
+//----------------------MATH----------------------------------------------------------
+//Math =built- in object that provides a collection of properties and methods
+
+let x = 3;
+let y = 2;
+let z;
+
+//Math.PI();
+//Math.E(); euler's number
+//z = Math.round(x); rounds the number
+//z = Math.floor(x); rounds down
+//z = Math.ceil(x); rounds up
+//z = Math.trunc(x);  revmove decimal portion
+//z = Math.pow(x, y); 3 power of 2 = 9
+//z = Math.sqrt(x); square root
+//z = Math.log(x); logarethum? 10 = 2.302585092994046
+//z = Math.sin(x); place radians
+//z = Math.cos(x); co-assign
+//z = Math.tan(x);
+//z = Math.abs(x); absolute value
+//z = Math.sign(x); sign of a value
+//let max = Math.max(x, y ,z); max value
+//let min = Math.min(x, y, z); min value
+
+console.log(z);
