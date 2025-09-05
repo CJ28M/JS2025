@@ -334,15 +334,74 @@ console.log(letterGrade);
 //allows you to manipulate and work with text (strings)
 
 //.charAt()--------------
-
-let userName = "BareCode"; // get specific characters from a string.
-
+let userName = "BroCode  "; // get specific characters from a string.
 userName.charAt(0); //"B"  .charAt()
-
 //console.log(userName.charAt(0));  //to show in console
 
 //.indexOf()--------------
+userName.indexOf(o); //2  first character
+//console.log(userName.indexOf(o));
 
-userName.indexOf(2);
+//.lastIndexOf()---------------
+userName.lastIndexOf(o); //5 last character
+//console.log(userName.lastIndex(o));
 
-//console.log(userName.indexOf(2));
+//.length()--------------
+userName.length; //7
+
+//.trim()---------------
+userName = userName.trim(); //remove white space before or after the assigned value
+console.log(userName);
+
+//.toUpperCase()------------
+userName.toUpperCase(); //to make all UPPER CASE
+console.log(userName);
+
+//.toLowerCase()--------
+userName.tolowerCase(); //to make all lowercase
+console.log(userName);
+
+//.repeat()----------
+userName.repeat(3); //repeats the string 3 times brocodebrocodebrocode
+console.log(userName);
+
+//.startWtih()---------
+
+let result = userName.startsWith(" "); //determend if a string starts with a specific character, returns boolean!
+
+console.log(result); //false
+
+/*if(result){
+  console.log("your username can't begin with ' '");
+ }
+else {
+  console.log(username)
+  }
+  */
+
+//.endsWith()------------------
+// same concept just at the end
+
+//,includes()---------------
+
+result = userName.includes(" "); //does sting conatain " " //false
+
+//.replaceAll()-------------
+//strings can't be number but we treat them as characters
+
+let phoneNumber = "123-456-7890";
+
+phoneNumber = phoneNumber.replaceAll("-", "/"); // replace dashes with forward slashes
+
+console.log(phoneNumber);
+
+//.padStart()----------
+
+phoneNumber = phoneNumber.padStart(15, "0"); //first value is how many characters should this srting be. Second value: starts with zero
+
+console.log(phoneNumber);
+
+//.padEnd()------
+//same concept as start, but at the end.
+
+//---------------------------------------------
