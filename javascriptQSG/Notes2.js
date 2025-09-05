@@ -263,8 +263,7 @@ const label3 = document.getElementById("label3");
 const min = 1;
 const max = 6;
 let randomNum1;
-let randomNum2;
-let randomNum3;
+let randomNum2;randomNum1 = Math.floor(Math.random() * max) + min;
 
 myButton.onclick = function(){
   randomNum1 = Math.floor(Math.random() * max) + min;
@@ -290,3 +289,48 @@ let discount = purchaseAmount >= 100 ? 10 : 0;
 console.log(
   `Your total is $${purchaseAmount - purchaseAmount * (discount / 100)}`
 );
+
+//-----------------------------------------------SWITCH-------------------------------
+//switch can be an efficiant replacement to many alse if statments
+
+let day = 1;
+
+switch (day) {
+  case 1:
+    console.log("It is Monday");
+    break;
+
+  case 2:
+    console.log("It's Turesday");
+    break;
+
+  default:
+    console.log(`${day} is not a day`);
+}
+
+let testScore = 92;
+let letterGrade;
+
+switch (true) {
+  case testScore >= 90:
+    letterGrade = "A";
+    break;
+  case testScore >= 80:
+    letterGrade = "B";
+    break;
+  case testScore >= 70:
+    letterGrade = "C";
+    break;
+  case testScore >= 60:
+    letterGrade = "D";
+    break;
+  default:
+    letterGrade = "F";
+}
+
+console.log(letterGrade);
+
+//--------------------------------String Methods-----------------------
+//allows you to manipulate and work with text (strings)
+
+let userName = "BareCode";
