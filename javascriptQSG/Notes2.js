@@ -333,4 +333,16 @@ console.log(letterGrade);
 //--------------------------------String Methods-----------------------
 //allows you to manipulate and work with text (strings)
 
-let userName = "BareCode";
+//.charAt()--------------
+
+let userName = "BareCode"; // get specific characters from a string.
+
+userName.charAt(0); //"B"  .charAt()
+
+//console.log(userName.charAt(0));  //to show in console
+
+//.indexOf()--------------
+
+userName.indexOf(2);
+
+//console.log(userName.indexOf(2));
