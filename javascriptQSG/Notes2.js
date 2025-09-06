@@ -248,12 +248,10 @@ const min = 1;
 const max = 6;
 let randomNum; //dont assign yet
 
-myButton.onclick = function () {
-  //what is the function doing? create a randomNum
-  randomNum = Math.floor(Math.random() * max) + min;
-  myLabel.textContent = randomNum;
-};
-
+// myButton.onclick = function () {
+//what is the function doing? create a randomNum
+randomNum = Math.floor(Math.random() * max) + min;
+// myLabel.textContent = randomNum;
 //------3 dices at once------------
 /* 
 const myButton = document.getElementById("myButton");
@@ -339,11 +337,11 @@ userName.charAt(0); //"B"  .charAt()
 //console.log(userName.charAt(0));  //to show in console
 
 //.indexOf()--------------
-userName.indexOf(o); //2  first character
+userName.indexOf("o"); //2  first character
 //console.log(userName.indexOf(o));
 
 //.lastIndexOf()---------------
-userName.lastIndexOf(o); //5 last character
+userName.lastIndexOf("o"); //5 last character
 //console.log(userName.lastIndex(o));
 
 //.length()--------------
@@ -358,7 +356,7 @@ userName.toUpperCase(); //to make all UPPER CASE
 console.log(userName);
 
 //.toLowerCase()--------
-userName.tolowerCase(); //to make all lowercase
+userName.toLowerCase(); //to make all lowercase
 console.log(userName);
 
 //.repeat()----------
@@ -404,4 +402,21 @@ console.log(phoneNumber);
 //.padEnd()------
 //same concept as start, but at the end.
 
-//---------------------------------------------
+//----------------------STRING SLICING-----------------------
+//creating a substring from a portion of another string
+//string.slice(start, end)
+
+const fullName = "Curtis Cobra";
+
+let firstName = fullName.slice(0, 6); //Curtis
+let lastName = fullName.slice(7); //Cobra or slice(7, 13);
+
+console.log(firstName);
+console.log(lastName);
+
+//What if you need the first character in the string?
+
+const firstCar = "Mercury Capri";
+
+let carBrand = firstCar.slice();
+let carModel = firstCar.slice();
