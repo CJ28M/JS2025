@@ -183,7 +183,7 @@ for (let detail in customer) {
 
 for (let detail in customer) {
   console.log(customer[detail]);
-} //Jack Off
+} //Jack Oliver
 
 // ** Try modifying our address class to add a country property. then use console.log to display it in the console.
 
