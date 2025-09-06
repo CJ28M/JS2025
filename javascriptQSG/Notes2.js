@@ -448,4 +448,17 @@ console.log(extension);
 
 //------NO METHOD CHAINING----------
 
+let name = window.prompt("Enter your name: ");
+
+// name = name.trim(); //remove blank spaces before and after name
+// let letter = name.charAt(0); //find first letter
+// letter = letter.toUpperCase(); //make it uppercase
+
+// let extraChars = name.slice(1); //selects the rest of characters in the string after (0)
+// extraChars = extraChars.toLowerCase(); //make them all lowercase
+// name = letter + extraChars; //combine all to display
+
+// console.log(name); //display in console
 //------METHOD CHAINING-------------
+name = name.trim().charAt(0).toUpperCase() + name.trim().slice(1).toLowerCase();
+console.log(name);
