@@ -48,3 +48,18 @@ const contactCard2 = {
 contactCard2.faveDish = "Mac n Cheese"; //object.label=value
 
 console.log("After faveDish: ", contactCard2);
+
+//--------------------------Types of Methods----------------------------------
+// Object.keys()  method that takes an object and returns an array of all the keys on that object
+
+console.log("Object.keys: ", Object.keys(contactCard2));
+//(7) ['firstName', 'lastName', 'dob', 'hobbies', 'lovesDogs', 'lovesCats', 'faveDish']
+
+//Object.values() method that takes an object and returns an array of all the values on that object.
+
+console.log("Object.values: ", Object.values(contactCard2));
+//['Jack', 'River', {…}, Array(3), true, false, 'Mac n Cheese']
+
+//Object.entries() method that takes an object and returns an array of all the entries that was put in of that object
+console.log("Object.entries: ", Object.entries(contactCard2));
+//(7) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(
