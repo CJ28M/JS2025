@@ -416,7 +416,36 @@ console.log(lastName);
 
 //What if you need the first character in the string?
 
+let firstChar = fullName.slice(0, 1); //C
+let lastChar = fullName.slice(-1); //a
+
+console.log(firstChar);
+console.log(lastChar);
+
+//more dynamic version
+
 const firstCar = "Mercury Capri";
 
-let carBrand = firstCar.slice();
-let carModel = firstCar.slice();
+let carBrand = firstCar.slice(0, firstCar.indexOf(" ")); //Mercury
+let carModel = firstCar.slice(firstCar.indexOf(" ") + 1); //Capri
+
+console.log(carBrand);
+console.log(carModel);
+
+//Excersice
+
+const email = "smashbros@gmail.com";
+
+//indexOf is use when searching for something
+let username = email.slice(0, email.indexOf("@")); //smashbros
+let extension = email.slice(email.indexOf("@")); //@gmail.com
+
+console.log(username);
+console.log(extension);
+
+//---------------------METHOD CHAINING-------------------
+//calling one method after another in one continuos line of code
+
+//------NO METHOD CHAINING----------
+
+//------METHOD CHAINING-------------
