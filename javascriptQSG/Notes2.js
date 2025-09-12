@@ -150,7 +150,7 @@ b.sayBye();
 
 class Grace {
   constructor(firstName) {
-    //is a property that belongs to object that class will create
+    // firstname is a property that belongs to the object that this class will create
     this.firstName = firstName;
   }
   sayJack(grace = " Jack, ") {
@@ -159,10 +159,7 @@ class Grace {
   }
 }
 
-b = new Grace("Off"); //object is now named b. and the firstName variable with our object is a  property.We can access that property from the outside the object.
-
-console.log(b.firstName);
-console.log(b["firstName"]);
+b = new Grace("Oliver"); //object is now named b. and the firstName variable with our object is a  property.We can access that property from the outside the object.
 
 //You can iterate through the properties in an object with a for loop.
 
@@ -201,7 +198,148 @@ for (let detail in customers) {
   console.log(detail + ": " + customers[detail]);
 }
 
-//-----Creatign Objects without Classes---------------------------------------------
+//-----Creating Objects without Classes---------------------------------------------
+
+//----With a Class:
+class Address1 {
+  constructor(firstName, lastName, zipCode, zodiacSign) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.zipCode = zipCode;
+    this.zodiacSign = zodiacSign;
+  }
+}
+
+//----Without a Class:
+const robert = {
+  firstName: "Robert",
+  lastName: "Jones",
+  zipCode: 12345,
+  zodiacSign: "Aquarius",
+  //to add methods
+  greeting: function () {
+    console.log(`Hello, ${this.firstName}!`);
+  },
+};
+
+robert.greeting(); //Hello, Robert!   //to display in console
+
+//Lets add a propperties-------------
+
+robert.phoneNumber = "845-845-8456";
+
+//INTERNAL JS MEMORY it would look like this:
+/* const robert = {
+    firstName: "Robert",
+    lastName: "Oliver",
+    zipCode: 12345,
+    zodiacSign: "Aquarius",
+    phoneNumber: "845-845-8456",
+    greeting: function() {
+        console.log(`Hello, ${this.firstName}!`)
+      }
+    }
+*/
+
+//To add a METHOD--------------
+
+robert.sayPhoneNumber = function () {
+  console.log(this.phoneNumber);
+};
+
+robert.sayPhoneNumber(); //to display in console
+
+//INTERNAL JS MEMORY it would look like this:
+/* const robert = {
+    firstName: "Robert",
+    lastName: "Oliver",
+    zipCode: 12345,
+    zodiacSign: "Aquarius",
+    phoneNumber: "845-845-8456",
+    greeting: function() {
+        console.log(`Hello, ${this.firstName}!`)
+      }
+
+      sayPhoneNumber: function() {
+        console.log(this.phoneNumber)
+        }
+    }
+*/
+
+//---TO Change a method, just define it again.
+
+robert.greeting = function () {
+  console.log(`Hello there, ${this.firstName}!`);
+};
+
+robert.greeting(); //to display in console
+
+//Example:
+const cardInfo = {
+  charName: "Fred",
+  charStyle: "Rogue",
+  charDob: {
+    month: "September",
+    day: 12,
+    year: 1990,
+  },
+  charSpecial: ["slightOfHand", "ghost", "jump"],
+  favSaying: function () {
+    console.log(`Pow! Right in the kisser!`);
+  },
+  weaponChoice: {
+    malee: {
+      knives: "Throwing Star",
+      random: "Tooth Pick",
+    },
+    primary: {
+      longRange: "SR22",
+      shortRange: "P90",
+      heavy: "M16",
+    },
+    secondary: {
+      longRange: "Bow",
+      midRange: "UZI",
+      shortRange: ".45",
+    },
+  },
+  charLocationBirth: "Spain",
+  charFavColor: "Purple",
+};
+
+cardInfo.favSaying = function () {
+  console.log(
+    `Greetings! My name is ${this.charName}, I'm from ${this.charLocationBirth}. Born in ${this.charDob.year}. My favorite weapon is ${this.weaponChoice.primary.longRange}!`
+  );
+}; //update favSaying
+
+cardInfo.favSaying(); //Greetings! My name is Fred, I'm from Spain. Born in 1990. My favorite weapon is SR22!
+//-------Making Iterables----------------
+//A single cycle through a block of code, usually as part of a loop.
+
+/* give an object a next() method and specify the symbol.iterator keyword.
+JS will then call this method on the object with each iteration of the the loop.*/
+
+evenNumbers = {};
+
+evenNumbers[Symbol.iterator] = function () {
+  let n = 0;
+  return {
+    next() {
+      n += 2;
+      return { value: n, done: false };
+    },
+  };
+};
+
+for (let n of evenNumbers) {
+  console.log(n); //2, 4, 6, 8, 10
+  if (n >= 10) break;
+}
+
+//==============================================================================================================================================================================
+//-------------------------------------------------------------------------------------------BROCODE----------------------------------------------------------------------------
+//==============================================================================================================================================================================
 
 //----------------------MATH----------------------------------------------------------
 //Math =built- in object that provides a collection of properties and methods
