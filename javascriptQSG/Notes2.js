@@ -359,7 +359,6 @@ for (let n of evenNumbers) {
 
 //--Classes versus Objects-----
 
-
 //==========================================================================================================================================================================
 //---------------------------------------------------------------------------Chapter 7-------------------------------------------------------------------------------------
 //=======================================================================================================================================================================
@@ -367,37 +366,38 @@ for (let n of evenNumbers) {
 //JavaScript Object Notation, is a way to package a JavaScript object.
 
 {
-  "coffeeSales"; [
+  ("coffeeSales");
+  [
     {
-      "blendName": "Arabica",
-      "cupsSold": "120"
-    
+      blendName: "Arabica",
+      cupsSold: "120",
     },
     {
-      "blendName": "Robusta",
-      "cupsSold": "242"
-    }
-  ]
+      blendName: "Robusta",
+      cupsSold: "242",
+    },
+  ];
 }
 
 const salesReport = {
   coffeeSales: [
     {
       blendName: "Arabica",
-      cupsSold: "120"
+      cupsSold: "120",
     },
     {
       blendName: "Robusta",
-      cupsSold: "242"
-    }
-  ]
-}
+      cupsSold: "242",
+    },
+  ],
+};
+//JSON.stringify function to convert a JS object to a JSON string, and JSON,parse to convert a JSON sstring back into a JS object.
+// let ssalesReport = JSON.parse(jsonString); //salesRoport is an object. convert it back into a JSON using JSON.stringify
 
+// let newJsonString = JSON.stringify(salesReport);
 
--
--
--
--
+// console.log(jsonString == newJsonString);
+
 //==============================================================================================================================================================================
 //-------------------------------------------------------------------------------------------BROCODE----------------------------------------------------------------------------
 //==============================================================================================================================================================================
@@ -647,7 +647,7 @@ console.log(extension);
 
 //------NO METHOD CHAINING----------
 
-let name = window.prompt("Enter your name: ");
+// let name = window.prompt("Enter your name: ");
 
 // name = name.trim(); //remove blank spaces before and after name
 // let letter = name.charAt(0); //find first letter
