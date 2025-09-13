@@ -367,7 +367,7 @@ for (let n of evenNumbers) {
 //JavaScript Object Notation, is a way to package a JavaScript object.
 
 {
-  "coffeeSales": [
+  "coffeeSales"; [
     {
       "blendName": "Arabica",
       "cupsSold": "120"
@@ -376,6 +376,19 @@ for (let n of evenNumbers) {
     {
       "blendName": "Robusta",
       "cupsSold": "242"
+    }
+  ]
+}
+
+const salesReport = {
+  coffeeSales: [
+    {
+      blendName: "Arabica",
+      cupsSold: "120"
+    },
+    {
+      blendName: "Robusta",
+      cupsSold: "242"
     }
   ]
 }
