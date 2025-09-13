@@ -311,10 +311,11 @@ cardInfo.favSaying = function () {
   console.log(
     `Greetings! My name is ${this.charName}, I'm from ${this.charLocationBirth}. Born in ${this.charDob.year}. My favorite weapon is ${this.weaponChoice.primary.longRange}!`
   );
-}; //update favSaying
+}; //This updates favSaying
 
 cardInfo.favSaying(); //Greetings! My name is Fred, I'm from Spain. Born in 1990. My favorite weapon is SR22!
-//-------Making Iterables----------------
+
+//------------------------------Making Iterables--------------------------------------------
 //A single cycle through a block of code, usually as part of a loop.
 
 /* give an object a next() method and specify the symbol.iterator keyword.
@@ -336,6 +337,25 @@ for (let n of evenNumbers) {
   console.log(n); //2, 4, 6, 8, 10
   if (n >= 10) break;
 }
+
+//the CORRECT WAY
+
+evenNumbers[Symbol.iterator] = function () {
+  let n = -2;
+  return {
+    next() {
+      n += 2;
+      return { value: n, done: false };
+    },
+  };
+};
+
+for (let n of evenNumbers) {
+  console.log(n);
+  if (n >= 10) break;
+}
+
+//------Function are Objects-------
 
 //==============================================================================================================================================================================
 //-------------------------------------------------------------------------------------------BROCODE----------------------------------------------------------------------------
